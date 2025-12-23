@@ -5,18 +5,37 @@
 <html>
 <head runat="server">
     <title></title>
+   <style>
+        body {
+            background-color: #b3d9ff; /* רקע תכלת */
+        }
+
+        .nav-link img {
+            
+        }
+    </style>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+               <style>background-color: #b3d9ff;</style> 
     <h1>master start</h1>
+<br />
 
-    <a href="about.aspx">about</a>
-    <a href="gallery.aspx">gallery</a>
+<a href="home.aspx" class="nav-link"><img src="images for html/home.png" width="40" </a>
+<a href="about.aspx" class="nav-link"><img src="images for html/about.png" width="40" </a>
+<a href="gallery.aspx" class="nav-link"><img src="images for html/gallery.png" width="40" </a>
+<a href="sign%20up.aspx" class="nav-link"><img src="images for html/sign up.png" width="40" </a>
+<a href="log%20in.aspx" class="nav-link"><img src="images for html/log in.png" width="40" </a>
+<a href="managment.aspx" class="nav-link"><img src="images for html/managment.png" width="40" </a>
+<a href="search.aspx" class="nav-link"><img src="images for html/search.png" width="40" </a>
+<a href="update%20details.aspx" class="nav-link"> <img src="images%20for%20html/update details.png" width="40" </a>
+<a href="disconnect.aspx" class="nav-link"> <img src="images%20for%20html/dissconnect.png" width="40" </a>
 
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-       
-        </asp:ContentPlaceHolder>
-    <h1>master end</h1>
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+
+<h1>master end</h1>
+
 </body>
 </html>
