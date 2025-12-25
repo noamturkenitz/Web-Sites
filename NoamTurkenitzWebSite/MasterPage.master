@@ -39,30 +39,33 @@
 </head>
 <body>
     <table border="1">  
-        <tr> <!--line 1- header -->
-        <th colspan="9"> 
+        <tr colspan="12"> <!--line 1- header -->
+        <th colspan="12"> 
     <h1>my website</h1>
         </th>
             </tr> <!-- end of line 1-->
-        <tr class="nav-link"> <!-- line 2-navigaition menu -->
+        <tr class="nav-link" colspan="12"> <!-- line 2-navigaition menu -->
              <td style="border:none;"><a href="home.aspx"><img src="images for html/home.png" /></a></td>
         <td style="border:none;"><a href="about.aspx"><img src="images for html/about.png"  /></a></td>
         <td style="border:none;"><a href="gallery.aspx"><img src="images for html/gallery.png"  /></a></td>
-        <td style="border:none;"><a href="sign%20up.aspx"><img src="images for html/sign up.png" /></a></td>
-        <td style="border:none;"><a href="log%20in.aspx"><img src="images for html/log in.png" /></a></td>
+        <td style="border:none;"><a href="sign_up.aspx"><img src="images for html/sign up.png" /></a></td>
+        <td style="border:none;"><a href="log_in.aspx"><img src="images%20for%20html/log%20in.png"/></a></td>
         <td style="border:none;"><a href="managment.aspx"><img src="images for html/managment.png"  /></a></td>
-        <td style="border:none;"><a href="search.aspx"><img src="images for html/search.png"  /></a></td>
-        <td style="border:none;"><a href="update%20details.aspx"><img src="images for html/update details.png" /></a></td>
+        <td style="border:none;"><a href="easy_search.aspx"><img src="images for html/easy_search.png"  /></a></td>
+        <td style="border:none;"><a href="complex_search.aspx"><img src="images%20for%20html/complex%20_search.png"/></a></td>
+        <td style="border:none;"><a href="easy_search_like.aspx"><img src="images for html/easy_search_like.png"  /></a></td>
+        <td style="border:none;"><a href="complex_search_like.aspx"><img src="images%20for%20html/complex%20_search_like.png" /></a></td>
+        <td style="border:none;"><a href="update_details.aspx"><img src="images%20for%20html/update%20details.png" /></a></td>
         <td style="border:none;"><a href="disconnect.aspx"><img src="images for html/dissconnect.png"  /></a></td>
     </tr> <!-- end of line 2 -->
         <tr> <!-- line 3-content placeholder -->
-            <td colspan="9">
+            <td colspan="12">
 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 </asp:ContentPlaceHolder>
                 </td>
 </tr> <!--end of line 3-->
         <tr> <!-- line 4- header of the bottom -->
-            <td colspan="9">
+            <td colspan="12">
                 <footer>thank you for sticking through</footer> 
             </td>
 
