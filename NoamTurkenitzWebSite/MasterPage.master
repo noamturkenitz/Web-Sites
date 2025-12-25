@@ -9,32 +9,64 @@
         body {
             background-color: #b3d9ff; /* רקע תכלת */
         }
+          table {
+        width: 100%;
+        margin: auto;
+            table-layout: fixed; /* מחלק את השורה שווה בשווה בין כל התאים */
+                border-collapse: collapse; /* מסיר רווחים בין תאים */
+    }
 
-        .nav-link img {
-        }
+    td, th {
+        text-align: center;
+        vertical-align: middle;
+    }
+     .nav-link td {
+    padding:10px 0;       /* מסיר רווח בין התאים */
+    text-align: center;
+    border: none;
+}
+
+.nav-link td img {
+    width: 100%;      /* רוחב אחיד */
+    height: auto;     /* גובה אחיד */
+    margin: auto;
+    display: block;/* מוודא שהתמונה במרכז התא */
+}
+
     </style>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-               <style>background-color: #b3d9ff;</style> 
-    <h1>master start</h1>
-<br />
-
-<a href="home.aspx" class="nav-link"><img src="images for html/home.png" width="40" </a>
-<a href="about.aspx" class="nav-link"><img src="images for html/about.png" width="40" </a>
-<a href="gallery.aspx" class="nav-link"><img src="images for html/gallery.png" width="40" </a>
-<a href="sign%20up.aspx" class="nav-link"><img src="images for html/sign up.png" width="40" </a>
-<a href="log%20in.aspx" class="nav-link"><img src="images for html/log in.png" width="40" </a>
-<a href="managment.aspx" class="nav-link"><img src="images for html/managment.png" width="40" </a>
-<a href="search.aspx" class="nav-link"><img src="images for html/search.png" width="40" </a>
-<a href="update%20details.aspx" class="nav-link"> <img src="images%20for%20html/update details.png" width="40" </a>
-<a href="disconnect.aspx" class="nav-link"> <img src="images%20for%20html/dissconnect.png" width="40" </a>
-
+    <table border="1">  
+        <tr> <!--line 1- header -->
+        <th colspan="9"> 
+    <h1>my website</h1>
+        </th>
+            </tr> <!-- end of line 1-->
+        <tr class="nav-link"> <!-- line 2-navigaition menu -->
+             <td style="border:none;"><a href="home.aspx"><img src="images for html/home.png" /></a></td>
+        <td style="border:none;"><a href="about.aspx"><img src="images for html/about.png"  /></a></td>
+        <td style="border:none;"><a href="gallery.aspx"><img src="images for html/gallery.png"  /></a></td>
+        <td style="border:none;"><a href="sign%20up.aspx"><img src="images for html/sign up.png" /></a></td>
+        <td style="border:none;"><a href="log%20in.aspx"><img src="images for html/log in.png" /></a></td>
+        <td style="border:none;"><a href="managment.aspx"><img src="images for html/managment.png"  /></a></td>
+        <td style="border:none;"><a href="search.aspx"><img src="images for html/search.png"  /></a></td>
+        <td style="border:none;"><a href="update%20details.aspx"><img src="images for html/update details.png" /></a></td>
+        <td style="border:none;"><a href="disconnect.aspx"><img src="images for html/dissconnect.png"  /></a></td>
+    </tr> <!-- end of line 2 -->
+        <tr> <!-- line 3-content placeholder -->
+            <td colspan="9">
 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 </asp:ContentPlaceHolder>
+                </td>
+</tr> <!--end of line 3-->
+        <tr> <!-- line 4- header of the bottom -->
+            <td colspan="9">
+                <footer>thank you for sticking through</footer> 
+            </td>
 
-<h1>master end</h1>
-
+        </tr>
+        </table>
 </body>
 </html>
