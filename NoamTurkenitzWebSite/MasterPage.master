@@ -45,18 +45,18 @@
         </th>
             </tr> <!-- end of line 1-->
         <tr class="nav-link" colspan="12"> <!-- line 2-navigaition menu -->
-             <td style="border:none;"><a href="home.aspx"><img src="images for html/home.png" /></a></td>
-        <td style="border:none;"><a href="about.aspx"><img src="images for html/about.png"  /></a></td>
-        <td style="border:none;"><a href="gallery.aspx"><img src="images for html/gallery.png"  /></a></td>
-        <td style="border:none;"><a href="sign_up.aspx"><img src="images for html/sign up.png" /></a></td>
-        <td style="border:none;"><a href="log_in.aspx"><img src="images%20for%20html/log%20in.png"/></a></td>
-        <td style="border:none;"><a href="managment.aspx"><img src="images for html/managment.png"  /></a></td>
-        <td style="border:none;"><a href="easy_search.aspx"><img src="images for html/easy_search.png"  /></a></td>
-        <td style="border:none;"><a href="complex_search.aspx"><img src="images%20for%20html/complex%20_search.png"/></a></td>
-        <td style="border:none;"><a href="easy_search_like.aspx"><img src="images for html/easy_search_like.png"  /></a></td>
-        <td style="border:none;"><a href="complex_search_like.aspx"><img src="images%20for%20html/complex%20_search_like.png" /></a></td>
-        <td style="border:none;"><a href="update_details.aspx"><img src="images%20for%20html/update%20details.png" /></a></td>
-        <td style="border:none;"><a href="disconnect.aspx"><img src="images for html/dissconnect.png"  /></a></td>
+             <td style="border:none;"><a href="home.aspx"><img src="images for html/home.png" /></a></td> <!-- home page button -->
+        <td style="border:none;"><a href="about.aspx"><img src="images for html/about.png"  /></a></td>   <!-- about us button -->
+        <td style="border:none;"><a href="gallery.aspx"><img src="images for html/gallery.png"  /></a></td> <!-- gallery button -->
+        <td style="border:none;"><a href="sign_up.aspx"><img src="images for html/sign up.png" /></a></td>   <!-- sign up button -->
+        <td style="border:none;"><a href="log_in.aspx"><img src="images%20for%20html/log%20in.png"/></a></td>  <!-- log in button -->
+        <td style="border:none;"><a href="managment.aspx"><img src="images for html/managment.png"  /></a></td>  <!-- management button -->
+        <td style="border:none;"><a href="easy_search.aspx"><img src="images for html/easy_search.png"  /></a></td>  <!-- easy search button -->
+        <td style="border:none;"><a href="complex_search.aspx"><img src="images%20for%20html/complex%20_search.png"/></a></td>  <!-- complex serach button -->
+        <td style="border:none;"><a href="easy_search_like.aspx"><img src="images for html/easy_search_like.png"  /></a></td>  <!-- easy search like button -->
+        <td style="border:none;"><a href="complex_search_like.aspx"><img src="images%20for%20html/complex%20_search_like.png" /></a></td>  <!-- complex search like button -->
+        <td style="border:none;"><a href="update_details.aspx"><img src="images%20for%20html/update%20details.png" /></a></td> <!-- update details button -->
+        <td style="border:none;"><a href="disconnect.aspx"><img src="images for html/dissconnect.png"  /></a></td>  <!-- disconnect button -->
     </tr> <!-- end of line 2 -->
         <tr> <!-- line 3-content placeholder -->
             <td colspan="12">
