@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>my website</title>
    <style>
         body {
             background-color: #b3d9ff; /* רקע תכלת */
@@ -38,13 +38,14 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form runat="server">
     <table border="1">  
-        <tr colspan="12"> <!--line 1- header -->
+        <tr> <!--line 1- header -->
         <th colspan="12"> 
     <h1>my website</h1>
         </th>
             </tr> <!-- end of line 1-->
-        <tr class="nav-link" colspan="12"> <!-- line 2-navigaition menu -->
+        <tr class="nav-link" > <!-- line 2-navigaition menu -->
              <td style="border:none;"><a href="home.aspx"><img src="images for html/home.png" /></a></td> <!-- home page button -->
         <td style="border:none;"><a href="about.aspx"><img src="images for html/about.png"  /></a></td>   <!-- about us button -->
         <td style="border:none;"><a href="gallery.aspx"><img src="images for html/gallery.png"  /></a></td> <!-- gallery button -->
@@ -71,5 +72,6 @@
 
         </tr>
         </table>
+    </form>
 </body>
 </html>
