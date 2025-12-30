@@ -5,73 +5,109 @@
 <html>
 <head runat="server">
     <title>my website</title>
-   <style>
+    <style>
         body {
             background-color: #b3d9ff; /* רקע תכלת */
         }
-          table {
-        width: 100%;
-        margin: auto;
+
+        table {
+            width: 100%;
+            margin: auto;
             table-layout: fixed; /* מחלק את השורה שווה בשווה בין כל התאים */
-                border-collapse: collapse; /* מסיר רווחים בין תאים */
-    }
+            border-collapse: collapse; /* מסיר רווחים בין תאים */
+        }
 
-    td, th {
-        text-align: center;
-        vertical-align: middle;
-    }
-     .nav-link td {
-    padding:10px 0;       /* מסיר רווח בין התאים */
-    text-align: center;
-    border: none;
-}
+        td, th {
+            text-align: center;
+            vertical-align: middle;
+        }
 
-.nav-link td img {
-    width: 100%;      /* רוחב אחיד */
-    height: auto;     /* גובה אחיד */
-    margin: auto;
-    display: block;/* מוודא שהתמונה במרכז התא */
-}
+        .nav-link td {
+            padding: 10px 0; /* מסיר רווח בין התאים */
+            text-align: center;
+            border: none;
+        }
 
+            .nav-link td  {
+                width: 100%; /* רוחב אחיד */
+                height: auto; /* גובה אחיד */
+                margin: auto;
+                display: block; /* מוודא שהתמונה במרכז התא */
+            }
+
+        img.menu {
+            width: 100px;
+            height: 70px
+        }
     </style>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
-    <table border="1">  
-        <tr> <!--line 1- header -->
-        <th colspan="12"> 
-    <h1>my website</h1>
-        </th>
-            </tr> <!-- end of line 1-->
-        <tr class="nav-link" > <!-- line 2-navigaition menu -->
-             <td style="border:none;"><a href="home.aspx"><img src="images for html/home.png" /></a></td> <!-- home page button -->
-        <td style="border:none;"><a href="about.aspx"><img src="images for html/about.png"  /></a></td>   <!-- about us button -->
-        <td style="border:none;"><a href="gallery.aspx"><img src="images for html/gallery.png"  /></a></td> <!-- gallery button -->
-        <td style="border:none;"><a href="sign_up.aspx"><img src="images for html/sign up.png" /></a></td>   <!-- sign up button -->
-        <td style="border:none;"><a href="log_in.aspx"><img src="images%20for%20html/log%20in.png"/></a></td>  <!-- log in button -->
-        <td style="border:none;"><a href="managment.aspx"><img src="images for html/managment.png"  /></a></td>  <!-- management button -->
-        <td style="border:none;"><a href="easy_search.aspx"><img src="images for html/easy_search.png"  /></a></td>  <!-- easy search button -->
-        <td style="border:none;"><a href="complex_search.aspx"><img src="images%20for%20html/complex%20_search.png"/></a></td>  <!-- complex serach button -->
-        <td style="border:none;"><a href="easy_search_like.aspx"><img src="images for html/easy_search_like.png"  /></a></td>  <!-- easy search like button -->
-        <td style="border:none;"><a href="complex_search_like.aspx"><img src="images%20for%20html/complex%20_search_like.png" /></a></td>  <!-- complex search like button -->
-        <td style="border:none;"><a href="update_details.aspx"><img src="images%20for%20html/update%20details.png" /></a></td> <!-- update details button -->
-        <td style="border:none;"><a href="disconnect.aspx"><img src="images for html/dissconnect.png"  /></a></td>  <!-- disconnect button -->
-    </tr> <!-- end of line 2 -->
-        <tr> <!-- line 3-content placeholder -->
-            <td colspan="12">
-<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-</asp:ContentPlaceHolder>
-                </td>
-</tr> <!--end of line 3-->
-        <tr> <!-- line 4- header of the bottom -->
-            <td colspan="12">
-                <footer>thank you for sticking through</footer> 
+    <table border="1">
+        <tr>
+            <!--line 1- header -->
+            <th >
+                <h1>my website</h1>
+            </th>
+        </tr>
+        <!-- end of line 1-->
+        <tr class="nav-link">
+            <!-- line 2-navigaition menu -->
+            <td>
+                <a href="home.aspx">
+                    <img class="menu" src="images for html/home.png" /></a>
+                <!-- home page button -->
+                <a href="about.aspx">
+                    <img class="menu" src="images for html/about.png" /></a>
+                <!-- about us button -->
+                <a href="gallery.aspx">
+                    <img class="menu" src="images for html/gallery.png" /></a>
+                <!-- gallery button -->
+                <a href="sign_up.aspx">
+                    <img class="menu" src="images for html/sign up.png" /></a>
+                <!-- sign up button -->
+                <a href="log_in.aspx">
+                    <img class="menu" src="images%20for%20html/log%20in.png" /></a>
+                <!-- log in button -->
+                <a href="managment.aspx">
+                    <img class="menu" src="images for html/managment.png" /></a>
+                <!-- management button -->
+                <a href="easy_search.aspx">
+                    <img class="menu" src="images for html/easy_search.png" /></a>
+                <!-- easy search button -->
+                <a href="complex_search.aspx">
+                    <img class="menu" src="images%20for%20html/complex%20_search.png" /></a>
+                <!-- complex serach button -->
+                <a href="easy_search_like.aspx">
+                    <img class="menu" src="images for html/easy_search_like.png" /></a>
+                <!-- easy search like button -->
+                <a href="complex_search_like.aspx">
+                    <img class="menu" src="images%20for%20html/complex%20_search_like.png" /></a>
+                <!-- complex search like button -->
+                <a href="update_details.aspx">
+                    <img class="menu" src="images%20for%20html/update%20details.png" /></a><!-- update details button -->
+                <a href="disconnect.aspx">
+                    <img class="menu" src="images for html/dissconnect.png" /></a>
+                <!-- disconnect button -->
+            </td>
+        </tr>
+        <!-- end of line 2 -->
+        <tr>
+            <!-- line 3-content placeholder -->
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <!--end of line 3-->
+        <tr>
+            <!-- line 4- header of the bottom -->
+            <td>
+                <footer>thank you for sticking through</footer>
             </td>
 
         </tr>
-        </table>
-    </form>
+    </table>
 </body>
 </html>

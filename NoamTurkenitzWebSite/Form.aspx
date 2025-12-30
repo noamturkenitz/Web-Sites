@@ -4,9 +4,10 @@
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       <h1>my form</h1>
+        <form runat="server" method="post">
             שם מלא: <input type="text" name="fullname" id="fullname" placeholder="enter your full name  ">
             <br />
-        מאכלים אהובים
+        :מאכלים אהובים
             <br />
             המבורגר <input type="checkbox" name="check-1" checked value="המבורגר" id="check_1"><br />
             פיצה <input type="checkbox" name="check-2" checked value="פיצה" id="check_2"><br />
@@ -15,7 +16,7 @@
             פסטה <input type="checkbox" name="check-5" value="פסטה" id="check_5">
 
              <br />
-           צבע אהוב 
+           :צבע אהוב
             <br />
            שחור <input type="radio" name="radio-1"  value="שחור" id="radio_1"><br />
          לבן   <input type="radio" name="radio-2" value="לבן" id="radio_2"><br />
@@ -39,6 +40,7 @@
             </select>
             <br />
             <input id="Submit1" type="submit" value="שלח" />
+            </form>
     </asp:Content>
 
 
