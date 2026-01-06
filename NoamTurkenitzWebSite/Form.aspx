@@ -9,23 +9,23 @@
             <br />
         :מאכלים אהובים
             <br />
-            המבורגר <input type="checkbox" name="check-1" checked value="המבורגר" id="check_1"><br />
+            המבורגר <input type="checkbox" name="check-2" checked value="המבורגר" id="check_1"><br />
             פיצה <input type="checkbox" name="check-2" checked value="פיצה" id="check_2"><br />
-            סושי <input type="checkbox" name="check-3" value="סושי"  id="check_3"><br />
-            שניצל <input type="checkbox" name="check-4" value="שניצל" id="check_4"> <br />  
-            פסטה <input type="checkbox" name="check-5" value="פסטה" id="check_5">
+            סושי <input type="checkbox" name="check-2" value="סושי"  id="check_3"><br />
+            שניצל <input type="checkbox" name="check-2" value="שניצל" id="check_4"> <br />  
+            פסטה <input type="checkbox" name="check-2" value="פסטה" id="check_5">
 
              <br />
            :צבע אהוב
             <br />
            שחור <input type="radio" name="radio-1"  value="שחור" id="radio_1"><br />
-         לבן   <input type="radio" name="radio-2" value="לבן" id="radio_2"><br />
-         אדום <input type="radio" name="radio-3" value="אדום"  id="radio_3"><br />
-          כחול  <input type="radio" name="radio-4" checked value="כחול" id="radio_4"><br />
-          ירוק  <input type="radio" name="radio-5" value="ירוק" id="radio_5"><br />
-          צהוב  <input type="radio" name="radio-6" value="צהוב" id="radio_6"><br />
-          סגול  <input type="radio" name="radio-7" value="סגול" id="radio_7"><br />
-          תכלת  <input type="radio" name="radio-8" value="תכלת" id="radio_8"><br />
+         לבן   <input type="radio" name="radio-1" value="לבן" id="radio_2"><br />
+         אדום <input type="radio" name="radio-1" value="אדום"  id="radio_3"><br />
+          כחול  <input type="radio" name="radio-1" checked value="כחול" id="radio_4"><br />
+          ירוק  <input type="radio" name="radio-1" value="ירוק" id="radio_5"><br />
+          צהוב  <input type="radio" name="radio-1" value="צהוב" id="radio_6"><br />
+          סגול  <input type="radio" name="radio-1" value="סגול" id="radio_7"><br />
+          תכלת  <input type="radio" name="radio-1" value="תכלת" id="radio_8"><br />
         :שאלות/בקשות/המלצות
             <textarea rows="10" cols="20" name="textarea1" id="textarea1" placeholder="הכנס מלל חופשי"></textarea>
             <br />
@@ -41,6 +41,15 @@
             <br />
             <input id="Submit1" type="submit" value="שלח" />
             </form>
+        <%=name %>
+        <br />
+        <%=food%>
+                <br />
+        <% =color%>
+                <br />
+        <%=requests %>
+                <br />
+        <%=age %>
     </asp:Content>
 
 
