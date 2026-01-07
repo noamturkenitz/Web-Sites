@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>my website</title>
+    <title>my website about music</title>
     <style>
         body {
             background-color: #b3d9ff; /* רקע תכלת */
