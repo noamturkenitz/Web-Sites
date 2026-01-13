@@ -66,10 +66,10 @@
         I just like to listen and maybe watch concerts
         <input type="radio" name="radio-1" checked value="watch and listen" id="radio_14"><br />
         <br />
-        המלצות לשירים וזמר או להקה אהובה<textarea rows="10" cols="40" name="textarea1" id="textarea1" placeholder="enter your favorite singer or band or a recomendation for songs "></textarea>
+        recommendations for songs and favorite band or singer<textarea rows="10" cols="40" name="textarea1" id="textarea1" placeholder="enter your favorite singer or band or a recomendation for songs "></textarea>
         <br />
         <select name="age" id="age">
-            <option value="0">תבחר את הגיל שלך</option>
+            <option value="0">select your age</option>
             <option value="13">13</option>
             <option value="14">14</option>
             <option value="15">15</option>

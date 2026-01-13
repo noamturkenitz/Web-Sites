@@ -12,7 +12,7 @@
 
         table {
             width: 100%;
-            margin: auto;
+            margin: auto;   
             table-layout: fixed; /* מחלק את השורה שווה בשווה בין כל התאים */
             border-collapse: collapse; /* מסיר רווחים בין תאים */
         }
@@ -28,12 +28,12 @@
             border: none;
         }
 
-            .nav-link td  {
-                width: 100%; /* רוחב אחיד */
-                height: auto; /* גובה אחיד */
-                margin: auto;
-                display: block; /* מוודא שהתמונה במרכז התא */
-            }
+        .nav-link td {
+            width: 100%; /* רוחב אחיד */
+            height: auto; /* גובה אחיד */
+            margin: auto;
+            display: block; /* מוודא שהתמונה במרכז התא */
+        }
 
         img.menu {
             width: 100px;
@@ -47,8 +47,8 @@
     <table border="1">
         <tr>
             <!--line 1- header -->
-            <th >
-                <h1>my website</h1>
+            <th>
+                <h1>my website about music</h1>
             </th>
         </tr>
         <!-- end of line 1-->
