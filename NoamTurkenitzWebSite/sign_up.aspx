@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form>
+    <form runat="server" method="post">
         <h2>sign up form</h2>
 
         enter your  name<input type="text" name="fullname-2" id="fullname-2" placeholder="enter your full name  ">
@@ -92,5 +92,6 @@
 
 
     </form>
+            <%=strRes %>
 </asp:Content>
 
