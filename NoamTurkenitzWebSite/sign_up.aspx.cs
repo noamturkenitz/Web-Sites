@@ -3,7 +3,6 @@
 public partial class sign_up : System.Web.UI.Page
 {
     public string strRes = "";
-
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack)
@@ -15,8 +14,15 @@ public partial class sign_up : System.Web.UI.Page
             string connection = Request.Form["radio-2"];
             string recommend = Request.Form["textarea3"];
             string age = Request.Form["age"];
+            string sqlcheck = "Select * from tUsers where Email=N'" + email +    "'";
 
-            string sql = "INSERT INTO tUsers values ("
+            bool isExist = MyAdoHelper.IsExist(sqlcheck);
+            if (isExist)
+            {
+                strRes = "mail is already occupied";
+            }
+            else { 
+                string sqlinsert = "INSERT INTO tUsers values ("
                        + "N'" + fullname + "',"
                        + "N'" + email + "',"
                        + "N'" + password + "',"
@@ -26,9 +32,10 @@ public partial class sign_up : System.Web.UI.Page
                        + age
                        + ")";
 
-            MyAdoHelper.DoQuery("MyDB.mdf",sql);
-
-            strRes = "נרשמת בהצלחה";
+                MyAdoHelper.DoQuery("MyDB.mdf", sqlinsert);
+                Response.Redirect("home.aspx");
+            }
+           
         }
     }
 }
