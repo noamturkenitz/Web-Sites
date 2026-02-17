@@ -73,18 +73,6 @@
                 <a href="managment.aspx">
                     <img class="menu" src="images for html/managment.png" /></a>
                 <!-- management button -->
-                <a href="easy_search.aspx">
-                    <img class="menu" src="images for html/easy_search.png" /></a>
-                <!-- easy search button -->
-                <a href="complex_search.aspx">
-                    <img class="menu" src="images%20for%20html/complex%20_search.png" /></a>
-                <!-- complex serach button -->
-                <a href="easy_search_like.aspx">
-                    <img class="menu" src="images for html/easy_search_like.png" /></a>
-                <!-- easy search like button -->
-                <a href="complex_search_like.aspx">
-                    <img class="menu" src="images%20for%20html/complex%20_search_like.png" /></a>
-                <!-- complex search like button -->
                 <a href="update_details.aspx">
                     <img class="menu" src="images%20for%20html/update%20details.png" /></a><!-- update details button -->
                 <a href="disconnect.aspx">
