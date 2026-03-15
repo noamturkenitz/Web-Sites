@@ -7,7 +7,6 @@ public partial class managment : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Page.IsPostBack)
         {
             string fullname = Request.Form["fun1"]; // asp:name
             string email = Request.Form["email"];
