@@ -14,8 +14,8 @@ public partial class managment : System.Web.UI.Page
 
             // אוסף את כל הרשומות
             string sql = "SELECT * FROM tUsers WHERE " +
-                         "name = N'" + fullname + "' AND " +
-                         "Email = N'" + email + "'";
+                         "name Like N'%" + fullname + "%' AND " +
+                         "Email Like N'%" + email + "%'";
             //string sqlselect = "SELECT * FROM tUsers";
 
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
