@@ -44,6 +44,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+   שלום <%=Session["username"]%>
     <table border="1">
         <tr>
             <!--line 1- header -->

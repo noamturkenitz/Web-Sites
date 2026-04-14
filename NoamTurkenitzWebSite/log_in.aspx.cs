@@ -1,51 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class log_in : System.Web.UI.Page
 {
     public string st = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack)
         {
             string email = Request.Form["Email"];
             string pass = Request.Form["Password"];
+
+            // Admin login
             if (email == "noam.turkenitz@gmail.com" && pass == "M123")
             {
+                Session["userName"] = "Admin";
                 Response.Redirect("managment.aspx");
             }
             else
             {
-
-
-
-                string sql = "Select * from tUsers where Email=N'" + email + "' AND password = N'" + pass + "'";
-
+                string sql = "SELECT * FROM tUsers WHERE Email = N'" + email + "' AND password = N'" + pass + "'";
                 bool isExist = MyAdoHelper.IsExist(sql);
+
                 if (!isExist)
                 {
-                    st = "email or password are wrong";
+                    Session["userName"] = "Guest";
+                    st = "Email or password are wrong";
                 }
                 else
                 {
+                    Session["userName"] = "User";
                     Response.Redirect("home.aspx");
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }
