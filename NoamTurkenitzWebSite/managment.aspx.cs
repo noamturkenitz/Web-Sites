@@ -11,7 +11,6 @@ public partial class managment : System.Web.UI.Page
             string fullname = Request.Form["fun1"]; // asp:name
             string email = Request.Form["email"];
 
-            // אוסף את כל הרשומות
             string sql = "SELECT * FROM tUsers WHERE " +
                          "name Like N'%" + fullname + "%' AND " +
                          "Email Like N'%" + email + "%'";

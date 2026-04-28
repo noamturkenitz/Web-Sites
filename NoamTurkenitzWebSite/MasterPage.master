@@ -44,7 +44,10 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <%if (Session["nihul"] == "ok" || Session["user"] == ok)
+        {  %>
    שלום <%=Session["username"]%>
+    <%} %>
     <table border="1">
         <tr>
             <!--line 1- header -->
@@ -65,20 +68,27 @@
                 <a href="gallery.aspx">
                     <img class="menu" src="images for html/gallery.png" /></a>
                 <!-- gallery button -->
+                <%if (Session["nihul"] != "ok" && Session["user"] != "ok") {  %>
+                <!-- sign up button -->
                 <a href="sign_up.aspx">
                     <img class="menu" src="images for html/sign up.png" /></a>
-                <!-- sign up button -->
+                <!-- log in button -->
                 <a href="log_in.aspx">
                     <img class="menu" src="images%20for%20html/log%20in.png" /></a>
-                <!-- log in button -->
+                <%}%>
+                <%if (Session["nihul"] == "ok")
+                    {  %>
                 <a href="managment.aspx">
                     <img class="menu" src="images for html/managment.png" /></a>
                 <!-- management button -->
-                <a href="update_details.aspx">
-                    <img class="menu" src="images%20for%20html/update%20details.png" /></a><!-- update details button -->
+                <%}%>
+               
+                <%if (Session["nihul"] == "ok" || Session["user"] == "ok")
+                    {  %>
                 <a href="disconnect.aspx">
                     <img class="menu" src="images for html/dissconnect.png" /></a>
                 <!-- disconnect button -->
+                <%} %>
             </td>
         </tr>
         <!-- end of line 2 -->
