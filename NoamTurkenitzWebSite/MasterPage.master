@@ -44,7 +44,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%if (Session["nihul"] == "ok" || Session["user"] == ok)
+    <%if (Session["nihul"] == "ok" || Session["user"] == "ok")
         {  %>
    שלום <%=Session["username"]%>
     <%} %>
