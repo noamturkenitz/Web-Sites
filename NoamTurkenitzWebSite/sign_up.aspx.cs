@@ -14,6 +14,7 @@ public partial class sign_up : System.Web.UI.Page
             string connection = Request.Form["radio-2"];
             string recommend = Request.Form["textarea3"];
             string age = Request.Form["age"];
+
             string sqlcheck = "Select * from tUsers where Email=N'" + email +    "'";
 
             bool isExist = MyAdoHelper.IsExist(sqlcheck);

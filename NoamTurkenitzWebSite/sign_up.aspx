@@ -5,25 +5,27 @@
         function checkAll() {
             nameErr.innerHTML = "";
             result = true;
-            if (checkName == false)
+            if (checkName() == false)
                 result = false;
                 //איפה שיהיה האימייל
             return result;
 
         }
         function checkName() {
-            name = ___.getElementByID("fullname-2").value;
-            if (name.length < 2)
-                NameErr.innerHTML = "name must contain at least 2 characters";
+            name = document.getElementById("fullname2").value;
+            if (name.length < 2) {
+                nameErr.innerHTML = "name must contain at least 2 characters";
+                return false;
+            }
             return true;
         }
-</script>
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form runat="server" method="post" onsumbit="return checkAll();">
+    <form runat="server" method="post" onsubmit="return checkAll();">
         <h2>sign up form</h2>
 
-        enter your  name<input type="text" name="fullname-2" id="fullname-2" placeholder="enter your full name  ">
+        enter your  name<input type="text" name="fullname-2" id="fullname2" placeholder="enter your full name  ">
         <span id="nameErr"></span>
         <br />
         enter your  Email<input type="text" name="Email" id="email" placeholder="enter your Email ">
