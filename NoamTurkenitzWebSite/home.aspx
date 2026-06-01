@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>home</h2>
+    <h2>welcome to my website</h2>
+    <p>
+       this website is entierly focoused on music. <br />
+        In this website you can find a lot of.......(i need to do the DB to finish the paragraph) 
+    </p>
 </asp:Content>
 
