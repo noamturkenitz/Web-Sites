@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Web.UI;
 
 public partial class log_in : System.Web.UI.Page
 {
@@ -8,36 +7,41 @@ public partial class log_in : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Page.IsPostBack)
+        if (!IsPostBack) return;
+
+        string email = Request.Form["Email"];
+        string pass = Request.Form["Password"];
+
+        // ===== ADMIN =====
+        if (email == "noam.turkenitz@gmail.com" && pass == "M123")
         {
-            string email = Request.Form["Email"];
-            string pass = Request.Form["Password"];
+            Session["user"] = "ok";
+            Session["nihul"] = "ok";
+            Session["userName"] = "Admin";
 
-            // Admin login
-            if (email == "noam.turkenitz@gmail.com" && pass == "M123")
-            {
-                Session["userName"] = "Admin";
-                Session["nihul"] = "ok";
-                Response.Redirect("managment.aspx");
-            }
-            else
-            {
-                string sql = "SELECT * FROM tUsers WHERE Email = N'" + email + "' AND password = N'" + pass + "'";
-                //bool isExist = MyAdoHelper.IsExist(sql);
-                DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
+            Response.Redirect("managment.aspx");
+            return;
+        }
 
-                if (dt.Rows.Count==0)
-                {
-                    Session["userName"] = "Guest";
-                    st = "Email or password are wrong";
-                }
-                else
-                {
-                    Session["user"] = "ok";
-                    Session["userName"] = dt.Rows[0]["name"];
-                    Response.Redirect("home.aspx");
-                }
-            }
+        // ===== USER =====
+        string sql = "SELECT * FROM tUsers WHERE Email=N'" + email + "' AND password=N'" + pass + "'";
+        DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
+
+        if (dt.Rows.Count > 0)
+        {
+            Session["user"] = "ok";
+            Session["nihul"] = "no"; // חשוב שיהיה מוגדר
+            Session["userName"] = dt.Rows[0]["name"].ToString();
+
+            Response.Redirect("home.aspx");
+        }
+        else
+        {
+            Session["user"] = null;
+            Session["nihul"] = null;
+            Session["userName"] = "Guest";
+
+            st = "Email or password are wrong";
         }
     }
 }

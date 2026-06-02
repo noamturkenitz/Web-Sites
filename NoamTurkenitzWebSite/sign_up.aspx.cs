@@ -33,7 +33,7 @@ public partial class sign_up : System.Web.UI.Page
                        + age
                        + ")";
 
-                MyAdoHelper.DoQuery(‏‏"MyDB - בית.mdf", sqlinsert);
+                MyAdoHelper.DoQuery("MyDB - בית.mdf", sqlinsert);
                 Response.Redirect("log_in.aspx");
             }
            

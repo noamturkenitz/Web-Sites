@@ -44,10 +44,28 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%if (Session["nihul"] == "ok" || Session["user"] == "ok")
-        {  %>
-   שלום <%=Session["username"]%>
-    <%} %>
+   <%
+string name = (string)Session["userName"];
+
+if (Session["nihul"] == "ok")
+{
+%>
+     hello admin <%=name %>
+<%
+}
+else if (Session["user"] == "ok")
+{
+%>
+    hello member <%=name %>
+<%
+}
+else
+{
+%>
+    hello guest
+<%
+}
+%>
     <table border="1">
         <tr>
             <!--line 1- header -->
@@ -88,6 +106,10 @@
                 <a href="disconnect.aspx">
                     <img class="menu" src="images for html/dissconnect.png" /></a>
                 <!-- disconnect button -->
+                    <a href="AddSong.aspx">
+<img class="menu" src="images for html/AddSong.png" />
+    </a>
+                <!-- Addsongs button -->
                 <%} %>
             </td>
         </tr>
