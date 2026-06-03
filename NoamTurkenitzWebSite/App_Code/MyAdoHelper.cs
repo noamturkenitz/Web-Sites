@@ -20,7 +20,7 @@ using System.Data.SqlClient;
 
 public class MyAdoHelper
 {
-    private const String dbFileName = "~/app_data/MyDB - בית.mdf"; //שיניתי עם CHATGPT כדי שיתאים ל DB של הבית ולא של הכיתה כי הוא המעודכן
+    private const String dbFileName = "~/app_data/MusicDB.mdf"; //שיניתי עם CHATGPT כדי שיתאים ל DB של הבית ולא של הכיתה כי הוא המעודכן
 
 
     public MyAdoHelper()

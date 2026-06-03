@@ -12,7 +12,7 @@
 
         table {
             width: 100%;
-            margin: auto;   
+            margin: auto;
             table-layout: fixed; /* מחלק את השורה שווה בשווה בין כל התאים */
             border-collapse: collapse; /* מסיר רווחים בין תאים */
         }
@@ -44,28 +44,28 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-   <%
-string name = (string)Session["userName"];
+    <%
+        string name = (string)Session["userName"];
 
-if (Session["nihul"] == "ok")
-{
-%>
+        if (Session["nihul"] == "ok")
+        {
+    %>
      hello admin <%=name %>
-<%
-}
-else if (Session["user"] == "ok")
-{
-%>
+    <%
+        }
+        else if (Session["user"] == "ok")
+        {
+    %>
     hello member <%=name %>
-<%
-}
-else
-{
-%>
+    <%
+        }
+        else
+        {
+    %>
     hello guest
-<%
-}
-%>
+    <%
+        }
+    %>
     <table border="1">
         <tr>
             <!--line 1- header -->
@@ -75,42 +75,72 @@ else
         </tr>
         <!-- end of line 1-->
         <tr class="nav-link">
-            <!-- line 2-navigaition menu -->
             <td>
+
                 <a href="home.aspx">
-                    <img class="menu" src="images for html/home.png" /></a>
-                <!-- home page button -->
+                    <img class="menu" src="images for html/home.png" />
+                </a>
+
                 <a href="about.aspx">
-                    <img class="menu" src="images for html/about.png" /></a>
-                <!-- about us button -->
+                    <img class="menu" src="images for html/about.png" />
+                </a>
+
                 <a href="gallery.aspx">
-                    <img class="menu" src="images for html/gallery.png" /></a>
-                <!-- gallery button -->
-                <%if (Session["nihul"] != "ok" && Session["user"] != "ok") {  %>
-                <!-- sign up button -->
-                <a href="sign_up.aspx">
-                    <img class="menu" src="images for html/sign up.png" /></a>
-                <!-- log in button -->
-                <a href="log_in.aspx">
-                    <img class="menu" src="images%20for%20html/log%20in.png" /></a>
-                <%}%>
-                <%if (Session["nihul"] == "ok")
-                    {  %>
+                    <img class="menu" src="images for html/gallery.png" />
+                </a>
+
+                <%
+                    if (Session["nihul"] != null && Session["nihul"].ToString() == "ok")
+                    {
+                %>
+
                 <a href="managment.aspx">
-                    <img class="menu" src="images for html/managment.png" /></a>
-                <!-- management button -->
-                <%}%>
-               
-                <%if (Session["nihul"] == "ok" || Session["user"] == "ok")
-                    {  %>
+                    <img class="menu" src="images for html/managment.png" />
+                </a>
+
+                <a href="ShowSongs.aspx">
+                    <img src="images for html/ShowSongs.png" />
+                </a>
+                <a href="AddSong.aspx">
+                    <img class="menu" src="images for html/AddSong.png" />
+                </a>
                 <a href="disconnect.aspx">
-                    <img class="menu" src="images for html/dissconnect.png" /></a>
-                <!-- disconnect button -->
-                    <a href="AddSong.aspx">
-<img class="menu" src="images for html/AddSong.png" />
-    </a>
-                <!-- Addsongs button -->
-                <%} %>
+                    <img class="menu" src="images for html/dissconnect.png" />
+                </a>
+
+                <%
+                    }
+                    else if (Session["user"] != null && Session["user"].ToString() == "ok")
+                    {
+                %>
+
+                <a href="AddSong.aspx">
+                    <img class="menu" src="images for html/AddSong.png" />
+                </a>
+                <a href="disconnect.aspx">
+                    <img class="menu" src="images for html/dissconnect.png" />
+                </a>
+
+                <%
+                    }
+                    else
+                    {
+                %>
+
+                <a href="sign_up.aspx">
+                    <img class="menu" src="images for html/sign up.png" />
+                </a>
+
+                <a href="log_in.aspx">
+                    <img class="menu" src="images for html/log in.png" />
+                </a>
+
+                <%
+                    }
+                %>
+
+
+
             </td>
         </tr>
         <!-- end of line 2 -->
