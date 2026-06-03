@@ -9,6 +9,9 @@ public partial class disconnect : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session.Clear();
+        Session.Abandon();
 
+        Response.Redirect("log_in.aspx");
     }
 }

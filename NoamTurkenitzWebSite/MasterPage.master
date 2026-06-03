@@ -50,7 +50,7 @@
         if (Session["nihul"] == "ok")
         {
     %>
-     hello admin <%=name %>
+     hello  <%=name %>
     <%
         }
         else if (Session["user"] == "ok")
@@ -112,15 +112,15 @@
                     }
                     else if (Session["user"] != null && Session["user"].ToString() == "ok")
                     {
-                  
+
                 %>
-                  <a href="ShowSongs.aspx">
-      <img class="menu" src="images for html/ShowSongs.png" />
-  </a>
+                <a href="ShowSongs.aspx">
+                    <img class="menu" src="images for html/ShowSongs.png" />
+                </a>
                 <a href="TopSongs.aspx">
                     <img class="menu" src="images for html/TopSongs.png" />
-                </a>  
-                
+                </a>
+
                 <a href="AddSong.aspx">
                     <img class="menu" src="images for html/AddSong.png" />
                 </a>

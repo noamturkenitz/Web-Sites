@@ -8,13 +8,25 @@ public partial class managment : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         {
-            string fullname = Request.Form["fun1"]; // asp:name
+            if (Session["nihul"] == null)
+            {
+                Response.Redirect("home.aspx");
+            }
+            string fullname = Request.Form["fun1"]; 
             string email = Request.Form["email"];
 
-            string sql = "SELECT * FROM tUsers WHERE " +
-                         "name Like N'%" + fullname + "%' AND " +
-                         "Email Like N'%" + email + "%'";
-            //string sqlselect = "SELECT * FROM tUsers";
+            string sql;
+
+            if (fullname == "" && email == "")
+            {
+                sql = "SELECT * FROM tUsers";
+            }   
+            else
+            {
+                sql = "SELECT * FROM tUsers WHERE " +
+                      "name LIKE N'%" + fullname + "%' AND " +
+                      "Email LIKE N'%" + email + "%'";
+            }
 
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 

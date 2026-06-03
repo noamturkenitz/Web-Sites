@@ -2,23 +2,102 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script language="javascript">
+
         function checkAll() {
             nameErr.innerHTML = "";
-            result = true;
+            emailErr.innerHTML = "";
+            passErr.innerHTML = "";
+            ageErr.innerHTML = "";
+
+            var result = true;
+
             if (checkName() == false)
                 result = false;
-                //איפה שיהיה האימייל
-            return result;
 
+            if (checkEmail() == false)
+                result = false;
+            if (checkPassword() == false)
+                result = false;
+            if (checkAge() == false)
+                result = false;
+
+            return result;
         }
+       
         function checkName() {
-            name = document.getElementById("fullname2").value;
+            var name = document.getElementById("fullname2").value;
+
             if (name.length < 2) {
                 nameErr.innerHTML = "name must contain at least 2 characters";
                 return false;
             }
+
             return true;
         }
+
+        function checkEmail() {
+            var email = document.getElementById("email").value;
+
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                emailErr.innerHTML = "invalid email";
+                return false;
+            }
+
+            return true;
+        }
+        function checkPassword() {
+            var pass = document.getElementById("password").value;
+            pass = pass.trim();
+
+            if (pass.length < 6) {
+                passErr.innerHTML = "password must contain at least 6 characters";
+                return false;
+            }
+
+            var hasLetter = false;
+            var hasNumber = false;
+            var hasUpper = false;
+
+            for (var i = 0; i < pass.length; i++) {
+                var ch = pass.charAt(i);
+
+                if (ch >= '0' && ch <= '9')
+                    hasNumber = true;
+
+                if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+                    hasLetter = true;
+                if (ch >= 'A' && ch <= 'Z')
+                    hasUpper = true;
+            }
+
+            if (!hasLetter || !hasNumber) {
+                passErr.innerHTML = "password must contain letters and numbers";
+                return false;
+            }
+            if (!hasUpper) {
+                passErr.innerHTML = "password must contain one capital letter";
+                return false;
+                
+            }
+            return true;
+        }
+        function showPass() {
+            var p = document.getElementById("password");
+
+            if (p.type == "password")
+                p.type = "text";
+            else
+                p.type = "password";
+        }
+        function checkAge() {
+            if (document.getElementById("age").value == "0") {
+                ageErr.innerHTML = "please select age";
+                return false;
+            }
+
+            return true;
+        }
+
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -28,11 +107,19 @@
         enter your  name<input type="text" name="fullname-2" id="fullname2" placeholder="enter your full name  ">
         <span id="nameErr"></span>
         <br />
-        enter your  Email<input type="text" name="Email" id="email" placeholder="enter your Email ">
+        enter your  Email
+        <input type="text" name="Email" id="email" placeholder="enter your Email ">
+        <span id="emailErr"></span>
         <br />
-        enter your  password<input type="text" name="password" id="password" placeholder="enter your password  ">
+        enter yor password
+        <input type="password" name="password" id="password" placeholder="enter your password">
+        <span id="passErr"></span>
+        <br />
+
+        <input type="checkbox" onclick="showPass()"> Show Password
 
         <br />
+
         types of music you like to listen to 
         <br />
         rock<input type="checkbox" name="check-1" checked value="rock" id="check_1"><br />
@@ -105,6 +192,7 @@
             <option value="17">17</option>
             <option value="18">18</option>
         </select>
+        <span id="ageErr"></span>
         <br />
 
         <input id="Submit1" type="submit" value="שלח" />

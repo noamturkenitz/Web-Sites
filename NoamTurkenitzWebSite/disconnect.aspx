@@ -4,9 +4,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>disconnect</h2>
-    <%Session.Abandon();
-        Response.Redirect("log_in.aspx");
-        %>
+    
 </asp:Content>
 
