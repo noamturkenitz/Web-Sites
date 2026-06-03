@@ -7,6 +7,5 @@
 
     <h2>All Songs</h2>
 
-    <%= st %>
-
+<%= tableData %>
 </asp:Content>

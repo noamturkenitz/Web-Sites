@@ -6,7 +6,7 @@
     <h2>welcome to my website</h2>
     <p>
        this website is entierly focoused on music. <br />
-        In this website you can find a lot of.......(i need to do the DB to finish the paragraph) 
+        In this website you can submit your favorite music
     </p>
 </asp:Content>
 

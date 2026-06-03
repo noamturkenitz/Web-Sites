@@ -36,6 +36,17 @@
         <input type="number" name="year" id="year" placeholder="Enter release year" />
 
         <br />
+        <br />
+
+Enter Rating (1-5)
+<select name="rating" id="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+        <br />
 
         <input id="Submit1" type="submit" value="Add Song" />
 

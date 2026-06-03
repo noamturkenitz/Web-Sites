@@ -14,7 +14,7 @@
             width: 100%;
             margin: auto;
             table-layout: fixed; /* מחלק את השורה שווה בשווה בין כל התאים */
-            border-collapse: collapse; /* מסיר רווחים בין תאים */
+            border-collapse: collapse; /* מוריד רווחים בין תאים */
         }
 
         td, th {
@@ -32,7 +32,7 @@
             width: 100%; /* רוחב אחיד */
             height: auto; /* גובה אחיד */
             margin: auto;
-            display: block; /* מוודא שהתמונה במרכז התא */
+            display: block; /* מוודא שהתמונה במרכז  */
         }
 
         img.menu {
@@ -112,8 +112,15 @@
                     }
                     else if (Session["user"] != null && Session["user"].ToString() == "ok")
                     {
+                  
                 %>
-
+                  <a href="ShowSongs.aspx">
+      <img class="menu" src="images for html/ShowSongs.png" />
+  </a>
+                <a href="TopSongs.aspx">
+                    <img class="menu" src="images for html/TopSongs.png" />
+                </a>  
+                
                 <a href="AddSong.aspx">
                     <img class="menu" src="images for html/AddSong.png" />
                 </a>

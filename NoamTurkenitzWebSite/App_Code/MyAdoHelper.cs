@@ -52,13 +52,12 @@ public class MyAdoHelper
     ///  הפעולה מקבלת משפט לביצוע ומבצעת את הפעולה על המסד
     /// </summary>
     /// <param name="sql">שאילת לביצוע כמחרוזת מחיקה/ הוספה/ עדכון</param>
-    public static void DoQuery(string fileName, string sql)
+    public static void DoQuery(string sql)
     {
         SqlConnection conn = ConnectToDb();
         conn.Open();
         SqlCommand com = new SqlCommand(sql, conn);
         com.ExecuteNonQuery();
-        com.Dispose();
         conn.Close();
     }
 
