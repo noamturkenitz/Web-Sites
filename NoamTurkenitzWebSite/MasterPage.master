@@ -99,7 +99,7 @@
                 </a>
 
                 <a href="ShowSongs.aspx">
-                    <img src="images for html/ShowSongs.png" />
+                    <img class="menu" src="images for html/ShowSongs.png" />
                 </a>
                 <a href="AddSong.aspx">
                     <img class="menu" src="images for html/AddSong.png" />
