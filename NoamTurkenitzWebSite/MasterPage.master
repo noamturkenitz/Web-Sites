@@ -51,6 +51,7 @@
         {
     %>
      hello  <%=name %>
+    <!--הדף מנהל רושם כבר ADMIN -->
     <%
         }
         else if (Session["user"] == "ok")
@@ -100,6 +101,9 @@
 
                 <a href="ShowSongs.aspx">
                     <img class="menu" src="images for html/ShowSongs.png" />
+                </a>
+                <a href="TopSongs.aspx">
+                    <img class="menu" src="images for html/TopSongs.png" />
                 </a>
                 <a href="AddSong.aspx">
                     <img class="menu" src="images for html/AddSong.png" />

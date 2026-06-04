@@ -47,8 +47,14 @@ public partial class ShowSongs : System.Web.UI.Page
 
         for (int i = 0; i < dt.Rows.Count; i++)
         {
-            tableData += "<tr>";
-            tableData += "<td>" + rank + "</td>";
+            if (rank == 1)
+                tableData += "<tr style='background-color:gold'>";
+            else if (rank == 2)
+                tableData += "<tr style='background-color:silver'>";
+            else if (rank == 3)
+                tableData += "<tr style='background-color:#cd7f32'>";
+            else
+                tableData += "<tr>"; tableData += "<td>" + rank + "</td>";
             tableData += "<td>" + dt.Rows[i]["AddedBy"] + "</td>";
             tableData += "<td>" + dt.Rows[i]["SongName"] + "</td>";
             tableData += "<td>" + dt.Rows[i]["Artist"] + "</td>";

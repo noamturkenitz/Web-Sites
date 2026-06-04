@@ -19,6 +19,15 @@ public partial class AddSong : System.Web.UI.Page
             string year = Request.Form["year"];
             string rating = Request.Form["rating"];
 
+            songName = songName.Replace("'", "''"); /*מחליף גרש אחד לשניים אך לא מראה למשתמש מכיוון שגרש אחד סוגר את הטקסט ואז מראה תקלה 
+                                                      זו הדרך היחידה לתת למתמש לרשום גרש במילה באנגלית למשל don't 
+                                                     מבלי שתיווצר שגיאה
+                                                     */
+
+
+            artist = artist.Replace("'", "''");
+            genre = genre.Replace("'", "''");
+
             if (songName == "" || artist == "" || year == "")
             {
                 strRes = " Please fill all fields";
