@@ -22,7 +22,7 @@ public partial class TopSongs : System.Web.UI.Page
         tableData += "<th>Rank</th>";
         tableData += "<th>Song</th>";
         tableData += "<th>Artist</th>";
-        tableData += "<th>popularity</th>";
+        tableData += "<th>Popularity</th>";
         tableData += "</tr>";
 
         for (int i = 0; i < dt.Rows.Count; i++)

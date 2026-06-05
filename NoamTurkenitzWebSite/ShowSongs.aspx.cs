@@ -6,7 +6,13 @@ public partial class ShowSongs : System.Web.UI.Page
     public string tableData = "";
 
     protected void Page_Load(object sender, EventArgs e)
+
     {
+        if (Request.Form["reset"] != null)
+        {
+            Response.Redirect("ShowSongs.aspx");
+            return;
+        }
         if (Session["user"] == null && Session["nihul"] == null)
         {
             Response.Redirect("home.aspx");
@@ -21,19 +27,30 @@ public partial class ShowSongs : System.Web.UI.Page
         {
             if (searchType == "song")
                 sql += " WHERE SongName LIKE N'%" + searchValue + "%'";
+
             else if (searchType == "artist")
                 sql += " WHERE Artist LIKE N'%" + searchValue + "%'";
-            else if (searchType == "year")
-                sql += " WHERE ReleaseYear = " + searchValue;
+
             else if (searchType == "genre")
                 sql += " WHERE Genre LIKE N'%" + searchValue + "%'";
+
+            else if (searchType == "year")
+                sql += " WHERE ReleaseYear = " + searchValue;
+
+            else if (searchType == "addedby")
+                sql += " WHERE AddedBy LIKE N'%" + searchValue + "%'";
+
+            else if (searchType == "popularity")
+                sql += " WHERE TotalRating = " + searchValue; //בחרתי בכוונה שיהי שווה בדיוק אפשר להחליף בגדול או גדול שווה
+
+            else if (searchType == "votes")
+                sql += " WHERE NumRatings >= " + searchValue;
         }
 
         sql += " ORDER BY TotalRating DESC";
 
         DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
-        int rank = 1;
         tableData = "";
 
         if (dt.Rows.Count == 0)
@@ -43,7 +60,18 @@ public partial class ShowSongs : System.Web.UI.Page
         }
 
         tableData += "<table border='1' style='width:100%; text-align:center;'>";
-        tableData += "<tr><th>Rank</th><th>Added By</th><th>Song</th><th>Artist</th><th>Genre</th><th>Year</th><th>Popularity</th><th>Votes</th></tr>";
+        tableData += "<tr>";
+        tableData += "<th>Rank</th>";
+        tableData += "<th>Added By</th>";
+        tableData += "<th>Song</th>";
+        tableData += "<th>Artist</th>";
+        tableData += "<th>Genre</th>";
+        tableData += "<th>Year</th>";
+        tableData += "<th>Popularity</th>";
+        tableData += "<th>Votes</th>";
+        tableData += "</tr>";
+
+        int rank = 1;
 
         for (int i = 0; i < dt.Rows.Count; i++)
         {
@@ -54,7 +82,9 @@ public partial class ShowSongs : System.Web.UI.Page
             else if (rank == 3)
                 tableData += "<tr style='background-color:#cd7f32'>";
             else
-                tableData += "<tr>"; tableData += "<td>" + rank + "</td>";
+                tableData += "<tr>";
+
+            tableData += "<td>" + rank + "</td>";
             tableData += "<td>" + dt.Rows[i]["AddedBy"] + "</td>";
             tableData += "<td>" + dt.Rows[i]["SongName"] + "</td>";
             tableData += "<td>" + dt.Rows[i]["Artist"] + "</td>";
@@ -62,6 +92,7 @@ public partial class ShowSongs : System.Web.UI.Page
             tableData += "<td>" + dt.Rows[i]["ReleaseYear"] + "</td>";
             tableData += "<td>" + dt.Rows[i]["TotalRating"] + "</td>";
             tableData += "<td>" + dt.Rows[i]["NumRatings"] + "</td>";
+
             tableData += "</tr>";
 
             rank++;

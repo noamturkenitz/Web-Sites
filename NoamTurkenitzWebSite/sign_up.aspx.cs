@@ -20,7 +20,7 @@ public partial class sign_up : System.Web.UI.Page
             bool isExist = MyAdoHelper.IsExist(sqlcheck);
             if (isExist)
             {
-                strRes = "mail is already occupied";
+                strRes = "Email is already in use";
             }
             else { 
                 string sqlinsert = "INSERT INTO tUsers values ("

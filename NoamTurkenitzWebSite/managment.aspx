@@ -4,10 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h2>User Management</h2>
-    <br />
   
     <center>
-        <h1>search with two things</h1>
+        <h1>Search with two criteria</h1>
 
         <form name="managerForm" method="post" runat="server">
             name
@@ -18,6 +17,7 @@
             <br />
             <input id="Submit1" type="submit" value="submit" />
             <br />
+            <input type="submit" name="reset" value="Reset" />
         </form>
 
         <%= st %>

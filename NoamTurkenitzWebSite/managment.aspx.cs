@@ -8,10 +8,17 @@ public partial class managment : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         {
-            if (Session["nihul"] == null)
+            if (Request.Form["reset"] != null)
+            {
+                Response.Redirect("managment.aspx");
+                return;
+            }
+            if (Session["nihul"] == null || Session["nihul"].ToString() != "ok")
             {
                 Response.Redirect("home.aspx");
             }
+            
+            
             string fullname = Request.Form["fun1"]; 
             string email = Request.Form["email"];
 
@@ -32,15 +39,13 @@ public partial class managment : System.Web.UI.Page
 
             if (dt.Rows.Count == 0)
             {
-                st = "no data was founded";
-            }
+st = "No data was found";            }
             else
             {
                 st += "<table border='1'>";
                 st += "<tr>";
                 st += "<th>name</th>";
                 st += "<th>email</th>";
-                st += "<th>password</th>";
                 st += "<th>type</th>";
                 st += "<th>connection</th>";
                 st += "<th>recommend</th>";
@@ -51,10 +56,12 @@ public partial class managment : System.Web.UI.Page
                 {
                     st += "<tr>";
 
-                    for (int k = 0; k < dt.Columns.Count; k++)
-                    {
-                        st += "<td>" + dt.Rows[i][k] + "</td>";
-                    }
+                    st += "<td>" + dt.Rows[i]["name"] + "</td>";
+                    st += "<td>" + dt.Rows[i]["Email"] + "</td>";
+                    st += "<td>" + dt.Rows[i]["types"] + "</td>";
+                    st += "<td>" + dt.Rows[i]["connections"] + "</td>";
+                    st += "<td>" + dt.Rows[i]["recommend"] + "</td>";
+                    st += "<td>" + dt.Rows[i]["age"] + "</td>";
 
                     st += "</tr>";
                 }

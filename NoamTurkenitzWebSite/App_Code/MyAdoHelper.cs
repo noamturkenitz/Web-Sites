@@ -85,16 +85,8 @@ public class MyAdoHelper
     /// <returns>אמת אם הנתונים קיימים ושקר אחרת</returns>
     public static bool IsExist(string sql)
     {
-
-        SqlConnection conn = ConnectToDb();
-        conn.Open();
-        SqlCommand com = new SqlCommand(sql, conn);
-        SqlDataReader data = com.ExecuteReader();
-        bool found;
-        found = (bool)data.Read();// אם יש נתונים לקריאה יושם אמת אחרת שקר - הערך קיים במסד הנתונים
-        conn.Close();
-        return found;
-
+        DataTable dt = ExecuteDataTable(sql);
+        return dt.Rows.Count > 0;
     }
 
     /// <summary>

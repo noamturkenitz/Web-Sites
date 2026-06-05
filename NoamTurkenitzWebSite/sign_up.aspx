@@ -102,7 +102,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <form runat="server" method="post" onsubmit="return checkAll();">
-        <h2>sign up form</h2>
+        <h2>Sign Up Form</h2>
 
         enter your  name<input type="text" name="fullname-2" id="fullname2" placeholder="enter your full name  ">
         <span id="nameErr"></span>
@@ -111,7 +111,7 @@
         <input type="text" name="Email" id="email" placeholder="enter your Email ">
         <span id="emailErr"></span>
         <br />
-        enter yor password
+        enter your password
         <input type="password" name="password" id="password" placeholder="enter your password">
         <span id="passErr"></span>
         <br />
@@ -163,7 +163,7 @@
         <input type="radio" name="radio-2" value="trumpet" id="radio_6"><br />
         I play the clarinet
         <input type="radio" name="radio-2" value="clarinet" id="radio_7"><br />
-        I play the saxsophone
+        I play the saxophone
         <input type="radio" name="radio-2" value="saxsophone" id="radio_8"><br />
         I play the flute
         <input type="radio" name="radio-2" value="flute" id="radio_9"><br />
@@ -179,7 +179,7 @@
         <input type="radio" name="radio-2" checked value="watch and listen" id="radio_14"><br />
         <br />
 
-        recommendations for songs and favorite band or singer<textarea rows="10" cols="40" name="textarea3" id="textarea1" placeholder="enter your favorite singer or band or a recomendation for songs "></textarea>
+enter your favorite singer or band or a recommendation for songs<textarea rows="10" cols="40" name="textarea3" id="textarea1" placeholder="enter your favorite singer or band or a recomendation for songs "></textarea>
         <br />
 
         <select name="age" id="age">

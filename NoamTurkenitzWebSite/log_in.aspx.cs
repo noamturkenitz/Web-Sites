@@ -39,7 +39,7 @@ public partial class log_in : System.Web.UI.Page
             Session["nihul"] = null;
             Session["userName"] = "Guest";
 
-            st = "Email or password are wrong";
+            st = "Invalid email or password";
         }
     }
 }

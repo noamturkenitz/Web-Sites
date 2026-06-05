@@ -41,7 +41,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server"> 
 <form runat="server" method="post" onsubmit="return checkLogin();">
-    <h2>log in</h2>
+<h2>Log In</h2>
     <br />
           enter your  Email<input type="text" name="Email" id="email" placeholder="enter your Email ">
     <span id="emailErr"></span>

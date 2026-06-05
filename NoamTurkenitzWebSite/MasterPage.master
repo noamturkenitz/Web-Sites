@@ -8,6 +8,7 @@
     <style>
         body {
             background-color: #b3d9ff; /* רקע תכלת */
+            font-size: 20px;
         }
 
         table {
@@ -24,7 +25,6 @@
 
         .nav-link td {
             padding: 10px 0; /* מסיר רווח בין התאים */
-            text-align: center;
             border: none;
         }
 
@@ -39,6 +39,8 @@
             width: 100px;
             height: 70px
         }
+
+
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -50,20 +52,20 @@
         if (Session["nihul"] == "ok")
         {
     %>
-     hello  <%=name %>
+     Hello  <%=name %>
     <!--הדף מנהל רושם כבר ADMIN -->
     <%
         }
         else if (Session["user"] == "ok")
         {
     %>
-    hello member <%=name %>
+    Hello Member <%=name %>
     <%
         }
         else
         {
     %>
-    hello guest
+    Hello Guest
     <%
         }
     %>
@@ -166,7 +168,8 @@
         <tr>
             <!-- line 4- header of the bottom -->
             <td>
-                <footer>thank you for sticking through</footer>
+<footer>Enjoy Your Stay</footer>
+
             </td>
 
         </tr>

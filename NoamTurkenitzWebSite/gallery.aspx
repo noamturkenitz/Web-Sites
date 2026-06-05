@@ -3,16 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
         img.gallery{
-            width:150px;
+            width:550px; 
             height:250px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>gallery</h2>
-    
-        <img src="https://cdn.teachercreated.com/covers/600w/V1651.jpg?v=20260420" class="gallery"/>
-    <img src="https://vocabzoo.com/wp-content/uploads/2025/10/String-Instruments-List-Names-with-Pictures.png" class="gallery" />
-    <img src="https://www.vedantu.com/seo/content-images/d113e14a-4bfd-4799-8366-ee4074f66685_1..png" class="gallery" />
+    <h2 style="color:navy">These are some of the most famous bands and singers who had the biggest influence on music history</h2>
+    <img src="images%20for%20html/AdeleMadonaWhitneyKatyCelineLadyGaga.png" class="gallery" />
+    <img src="images%20for%20html/BeatlesU2QueenNirvana.jpg" class="gallery"/>
+    <img src="images%20for%20html/ElvisMJTimberlakeBonJoviEminemHarryStyles.jpg" class="gallery" />
+    <img src="images%20for%20html/ModeCureGunsPolice.jpg" class="gallery"/>
+    <img src="images%20for%20html/RhcpREMTHeSMithsBackstreet.jpg" class="gallery" />
+    <img src="images%20for%20html/SoulFolkRockPop.jpg" class="gallery"/>
 </asp:Content>
 

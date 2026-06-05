@@ -64,7 +64,7 @@ function checkSong()
 
         <br />
     enter release year
- <input type="number" name="year" id="year" placeholder="enter the realese year" />
+ <input type="number" name="year" id="year" placeholder="enter the release year" />
 <span id="yearErr"></span>
 
         <br />
